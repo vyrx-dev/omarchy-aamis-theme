@@ -28,6 +28,14 @@ Near‑black canvas, creamy text, warm amber highlights, and a single red accent
 omarchy-theme-install https://github.com/vyrx-dev/omarchy-aamis-theme.git
 ```
 
+## Vesktop-Theme
+
+For Vesktop users, you can install this theme by copying the theme file to your Vesktop themes directory:
+
+```bash
+cp vencord.theme.css ~/.config/vesktop/themes/Aamis.theme.css
+```
+
 ## Acknowledgments
 
 This theme was created using [Aether](https://github.com/bjarneo/aether) by [@bjarneo](https://github.com/bjarneo).
