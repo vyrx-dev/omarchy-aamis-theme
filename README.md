@@ -33,6 +33,8 @@ omarchy-theme-install https://github.com/vyrx-dev/omarchy-aamis-theme.git
 For Vesktop users, you can install this theme by copying the theme file to your Vesktop themes directory:
 
 ```bash
+cd ~/.config/omarchy/themes/aamis/
+
 cp vencord.theme.css ~/.config/vesktop/themes/Aamis.theme.css
 ```
 
