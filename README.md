@@ -7,9 +7,9 @@ Near‑black canvas, creamy text, warm amber highlights, and a single red accent
 >
 ## Preview
 
-| Lazygit |  BTOP   | Walker     |
+| Lazygit |  BTOP   | Nvim     |
 |:---:|:---:|:---:|
-| ![Lazygit](assets/lazygit.png) | ![Btop](assets/btop.png) | ![Walker](assets/walker.png) |
+| ![Lazygit](assets/lazygit.png) | ![Btop](assets/btop.png) | ![Neovim](assets/neovim.png) |
 
 ![Omarchy homescreen setup](./assets/homescreen.png)
 ![Omarchy btop](./assets/setup.png)
