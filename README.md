@@ -12,7 +12,7 @@ Near‑black canvas, creamy text, warm amber highlights, and a single red accent
 | ![Lazygit](assets/lazygit.png) | ![Btop](assets/btop.png) | ![Walker](assets/walker.png) |
 
 ![Omarchy homescreen setup](./assets/homescreen.png)
-![Omarchy btop](./assets/setup-1.png)
+![Omarchy btop](./assets/setup.png)
 
 ---
 
