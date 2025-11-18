@@ -1,0 +1,135 @@
+# Vicinae's theme docs: https://docs.vicinae.com/theming/getting-started
+
+[meta]
+name        = "Aamis" # Display name shown in theme picker
+description = "Ported to Vicinae from github.com:vyrx-dev/omarchy-aamis-theme.git; A thoughtfully crafted theme for Omarchy. Near‑black canvas, creamy text, warm amber highlights, and a single red accent for clear, focused contrast." # Description shown in theme picker
+variant     = "dark" # Theme variant: "dark" or "light". Every dark theme inherits from vicinae-dark and every light theme from vicinae-light. 
+icon        = "icons/aamis-theme-icon.png"
+
+# ============================================================================
+# Core Colors
+# ============================================================================
+# Mapping Aether's base palette:
+# base00 = #0f0f0f (background)
+# base01 = #5e5959 (status/secondary background)
+# base02 = #0f0f0f (selection background)
+# base03 = #5e5959 (comments/invisibles)
+# base04 = #e6caab (dark foreground / muted)
+# base05 = #eadccc (primary foreground)
+# base06 = #eadccc (light foreground)
+# base07 = #e6caab (light background)
+# base08 = #e25d6c (red)
+# base09 = #e9838f (orange)
+# base0A = #f4bb54 (amber / primary accent)
+# base0B = #cea37f (strings / green)
+# base0C = #e8ab3b (cyan / support)
+# base0D = #e2be8a (functions / blue)
+# base0E = #f66151 (magenta)
+# base0F = #edb95a (brown/yellow)
+
+[colors.core]
+accent               = "#f4bb54" # base0A - warm amber highlight
+accent_foreground    = "#0f0f0f" # dark text on bright accent
+background           = "#0f0f0f" # base00 - main background
+foreground           = "#eadccc" # base05 - primary text
+secondary_background = "#1b1b1b" # base01 - raised surfaces, status bars
+border               = "#5e5959" # mid-contrast border
+
+# ============================================================================
+# Window-Specific Colors
+# ============================================================================
+
+[colors.main_window]
+border = "colors.core.border"
+
+[colors.settings_window]
+border = "colors.core.border"
+
+# ============================================================================
+# Accent Colors
+# ============================================================================
+# Your color palette, central to your theme's identity
+
+[colors.accents]
+blue    = "#e2be8a" # base0D (soft beige/blue role in Aether)
+green   = "#cea37f" # base0B (strings / green-ish warm)
+magenta = "#f66151" # base0E
+orange  = "#e9838f" # base09
+red     = "#e25d6c" # base08 - primary red accent
+yellow  = "#f4bb54" # base0A - warm amber
+cyan    = "#e8ab3b" # base0C
+purple  = "#e6caab" # base04 - used as soft purple/neutral
+
+# ============================================================================
+# Text Colors
+# ============================================================================
+# Colors for various text states and meanings
+
+[colors.text]
+default     = "colors.core.foreground"
+muted       = "#e6caab" # base04 - softer creamy text
+danger      = "colors.accents.red"
+success     = "colors.accents.green"
+placeholder = "#5e5959" # base03 - comment / hint tone
+selection   = { background = "colors.core.accent", foreground = "colors.core.accent_foreground" }
+
+[colors.text.links]
+default = "colors.accents.yellow" # warm amber links
+visited = "colors.accents.orange" # slightly warmer / softer
+
+# ============================================================================
+# Input Fields
+# ============================================================================
+
+[colors.input]
+border       = "colors.core.border"
+border_focus = "colors.core.accent"
+border_error = "colors.accents.red"
+
+# ============================================================================
+# Buttons
+# ============================================================================
+
+[colors.button.primary]
+background = "colors.core.secondary_background"
+foreground = "colors.core.foreground"
+hover      = { background = "#e2be8a" }
+focus      = { outline = "colors.core.accent" }
+
+# ============================================================================
+# Lists
+# ============================================================================
+
+[colors.list.item.hover]
+background = "colors.core.secondary_background"
+foreground = "colors.core.foreground"
+
+[colors.list.item.selection]
+background           = "colors.core.secondary_background"
+foreground           = "colors.core.foreground"
+secondary_background = "colors.core.border"
+secondary_foreground = "colors.core.foreground"
+
+# ============================================================================
+# Grid Items
+# ============================================================================
+
+[colors.grid.item]
+background = "colors.core.secondary_background"
+hover      = { outline = "colors.core.foreground" }
+selection  = { outline = "colors.core.accent" }
+
+# ============================================================================
+# Scrollbars
+# ============================================================================
+
+[colors.scrollbars]
+background = "colors.core.border"
+
+# ============================================================================
+# Loading Indicators
+# ============================================================================
+
+[colors.loading]
+bar     = "colors.core.foreground"
+spinner = "colors.core.foreground"
