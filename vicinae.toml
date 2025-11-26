@@ -32,7 +32,7 @@ accent               = "#f4bb54" # base0A - warm amber highlight
 accent_foreground    = "#0f0f0f" # dark text on bright accent
 background           = "#0f0f0f" # base00 - main background
 foreground           = "#eadccc" # base05 - primary text
-secondary_background = "#1b1b1b" # base01 - raised surfaces, status bars
+secondary_background = "#1b1b1b" # custom value for raised surfaces, status bars (not base01)
 border               = "#5e5959" # mid-contrast border
 
 # ============================================================================
