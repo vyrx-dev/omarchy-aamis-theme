@@ -51,7 +51,6 @@ cp assets/icons/aamis-icon-transparent-bg.png \
   ~/.local/share/vicinae/themes/icons/aamis-theme-icon.png
 ```
 
-This copies the transparent icon `assets/icons/aamis-icon-transparent-bg.png` as `aamis-theme-icon.png` in Vicinae's themes icons folder.
 
 ## Acknowledgments
 
