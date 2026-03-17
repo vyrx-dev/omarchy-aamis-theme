@@ -51,6 +51,14 @@ cp assets/icons/aamis-icon-transparent-bg.png \
   ~/.local/share/vicinae/themes/icons/aamis-theme-icon.png
 ```
 
+## Typora Theme
+
+In Typora simply set the Theme in the *Themes* option
+
+```bash
+  cp aamis.css ~/.config/Typora/aamis.css
+```
+
 
 ## Acknowledgments
 
