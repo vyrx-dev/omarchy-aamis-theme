@@ -65,3 +65,7 @@ In Typora simply set the Theme in the *Themes* option
 This theme was created using [Aether](https://github.com/bjarneo/aether) by [@bjarneo](https://github.com/bjarneo).
 
 The Vicinae theme and logo were provided by [@lukapmoran](https://github.com/lukapmoran).
+
+The Typora theme was contributed by [@pymmog](https://github.com/pymmog).
+
+The VS Code theme was contributed by [@fedesapuppo](https://github.com/fedesapuppo).
