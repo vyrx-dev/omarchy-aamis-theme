@@ -1,9 +1,9 @@
 # ⛱ Aamis Theme for Omarchy
 
 A thoughtfully crafted theme for [Omarchy](https://omarchy.org).
-Near‑black canvas, creamy text, warm amber highlights, and a single red accent for clear, focused contrast.
+macOS Light Mode aesthetic with crisp white backgrounds, classic blue accents, and beautiful glass/blur effects.
 
-> _"Aamis — Code in the spotlight.."_
+> _"Aamis — Bringing the refined macOS look to your setup."_
 
 ## Preview
 

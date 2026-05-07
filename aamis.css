@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: #eadccc;
-    background-color: #0f0f0f;
+    color: #1c1c1c;
+    background-color: #f5f5f5;
     line-height: 1.6;
 }
 
@@ -40,10 +40,10 @@ body {
 }
 
 a {
-    color: #e8ab3b;
+    color: #5ac8fa;
 }
 a:hover {
-    color: #f4bb54;
+    color: #ffcc00;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     line-height: 1.4;
     cursor: text;
-    color: #ede4c8;
+    color: #af52de;
 }
 
 h1:hover a.anchor,
@@ -147,9 +147,9 @@ ol:last-child {
 }
 
 blockquote {
-    border-left: 4px solid #e25d6c;
+    border-left: 4px solid #ff3b30;
     padding: 0 15px;
-    color: #e6caab;
+    color: #ffffff;
 }
 
 blockquote blockquote {
@@ -165,7 +165,7 @@ table tr {
     border: 1px solid #2c2420;
     margin: 0;
     padding: 0;
-    background-color: #0f0f0f;
+    background-color: #f5f5f5;
 }
 
 table tr:nth-child(2n),
@@ -179,7 +179,7 @@ table th {
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
-    color: #ede4c8;
+    color: #af52de;
 }
 
 table td {
@@ -216,7 +216,7 @@ tt {
     padding: 0;
     padding: 2px 4px 0px 4px;
     font-size: 0.9em;
-    color: #cea37f;
+    color: #34c759;
 }
 
 code {
@@ -230,7 +230,7 @@ code {
     padding-top: 8px;
     padding-bottom: 6px;
     background-color: #141414;
-    color: #eadccc;
+    color: #1c1c1c;
 }
 
 .md-task-list-item > input {
@@ -310,7 +310,7 @@ code {
 }
 
 #typora-quick-open-item {
-    background-color: #0f0f0f;
+    background-color: #f5f5f5;
     border-color: #1a1a1a #2c2420 #2c2420 #222;
     border-style: solid;
     border-width: 1px;
@@ -324,7 +324,7 @@ code {
 header, .context-menu, .megamenu-content, footer {
     font-family: "Segoe UI", "Arial", sans-serif;
     background-color: #141414;
-    color: #eadccc;
+    color: #1c1c1c;
 }
 
 .file-node-content:hover .file-node-icon,
@@ -338,11 +338,11 @@ header, .context-menu, .megamenu-content, footer {
 }
 
 .mac-os #write {
-    caret-color: #e8ab3b;
+    caret-color: #5ac8fa;
 }
 
 .md-lang {
-    color: #e25d6c;
+    color: #ff3b30;
 }
 
 #md-notification .btn {
@@ -359,8 +359,8 @@ header, .context-menu, .megamenu-content, footer {
 }
 
 .ty-preferences .nav-group-item.active {
-    color: #0f0f0f;
-    background: #e8ab3b;
+    color: #f5f5f5;
+    background: #5ac8fa;
 }
 
 .menu-item-container a.menu-style-btn {
@@ -369,16 +369,16 @@ header, .context-menu, .megamenu-content, footer {
 }
 
 /* Syntax highlighting accent colors */
-.cm-s-inner .cm-keyword    { color: #e25d6c; }
-.cm-s-inner .cm-operator   { color: #e8ab3b; }
-.cm-s-inner .cm-variable   { color: #eadccc; }
-.cm-s-inner .cm-variable-2 { color: #e6caab; }
-.cm-s-inner .cm-string     { color: #cea37f; }
-.cm-s-inner .cm-number     { color: #f4bb54; }
+.cm-s-inner .cm-keyword    { color: #ff3b30; }
+.cm-s-inner .cm-operator   { color: #5ac8fa; }
+.cm-s-inner .cm-variable   { color: #1c1c1c; }
+.cm-s-inner .cm-variable-2 { color: #ffffff; }
+.cm-s-inner .cm-string     { color: #34c759; }
+.cm-s-inner .cm-number     { color: #ffcc00; }
 .cm-s-inner .cm-comment    { color: #6a5f52; font-style: italic; }
-.cm-s-inner .cm-def        { color: #e2be8a; }
-.cm-s-inner .cm-atom       { color: #f4bb54; }
-.cm-s-inner .cm-builtin    { color: #ede4c8; }
-.cm-s-inner .cm-tag        { color: #e25d6c; }
-.cm-s-inner .cm-attribute  { color: #e8ab3b; }
-.cm-s-inner .cm-type       { color: #e2be8a; }
+.cm-s-inner .cm-def        { color: #007aff; }
+.cm-s-inner .cm-atom       { color: #ffcc00; }
+.cm-s-inner .cm-builtin    { color: #af52de; }
+.cm-s-inner .cm-tag        { color: #ff3b30; }
+.cm-s-inner .cm-attribute  { color: #5ac8fa; }
+.cm-s-inner .cm-type       { color: #007aff; }

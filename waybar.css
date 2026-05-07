@@ -1,2 +1,7 @@
-@define-color background #0f0f0f;
-@define-color foreground #eadccc;
+@define-color background rgba(245, 245, 245, 0.75);
+@define-color foreground #1c1c1c;
+
+window#waybar {
+    background: @background;
+    border-radius: 12px;
+}

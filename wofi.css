@@ -1,18 +1,20 @@
-@define-color bg #0f0f0f;
-@define-color fg #eadccc;
-@define-color gray1 #cea37f;
-@define-color gray2 #706a6a;
-@define-color gray3 #e2be8a;
-@define-color gray4 #f4bb54;
-@define-color gray5 #ede4c8;
-@define-color fg_bright #eadccc;
+@define-color bg rgba(245, 245, 245, 0.75);
+@define-color fg #1c1c1c;
+@define-color gray1 #34c759;
+@define-color gray2 #8e8e93;
+@define-color gray3 #007aff;
+@define-color gray4 #ffcc00;
+@define-color gray5 #af52de;
+@define-color fg_bright #1c1c1c;
 
 window {
+    border-radius: 12px;
     background-color: @bg;
     border: 2px solid @gray3;
 }
 
 input {
+    border-radius: 8px;
     background-color: @bg;
     color: @fg;
     border: 1px solid @gray2;
@@ -24,6 +26,7 @@ input:selected {
 }
 
 #entry {
+    border-radius: 6px;
     color: @fg;
     background-color: @bg;
     padding: 5px;
