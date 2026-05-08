@@ -1,0 +1,141 @@
+@define-color selected-text #ffffff;
+@define-color text #1c1c1c;
+@define-color base #ffffff;
+@define-color border #8e8e93;
+@define-color foreground #1c1c1c;
+@define-color background #f5f5f5;
+@define-color selected-accent #007aff;
+@define-color caret #007aff;
+@define-color success #34c759;
+@define-color success-alt #34c759;
+
+window,
+#window,
+#box {
+  background-color: rgba(245, 245, 245, 0.90);
+  color: @foreground;
+  border: 1px solid alpha(@border, 0.45);
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.35),
+    0 15px 12px rgba(0, 0, 0, 0.25);
+  /* Liquid Glass effect */
+  /* Note: Walker/GTK might not support backdrop-filter natively in all environments, but we set opacity to 0.90 for transparency */
+}
+
+entry,
+#input,
+#password,
+#typeahead {
+  background-color: alpha(@base, 0.6);
+  color: @text;
+  caret-color: @caret;
+  border: 1px solid alpha(@border, 0.55);
+  border-radius: 12px;
+  padding: 8px 12px;
+  box-shadow: none;
+}
+
+entry selection {
+  background-color: alpha(@selected-accent, 0.45);
+  color: @text;
+}
+
+#search {
+  background-color: alpha(@base, 0.85);
+  border-radius: 12px;
+  padding: 6px;
+  border: 1px solid alpha(@border, 0.35);
+}
+
+#prompt,
+#clear,
+#typeahead {
+  color: alpha(@foreground, 0.7);
+}
+
+#prompt {
+  margin-right: 8px;
+}
+
+listview,
+listbox,
+scrolledwindow {
+  background-color: transparent;
+}
+
+scrolledwindow {
+  max-height: none;
+}
+
+#list {
+  min-height: 0;
+}
+
+row,
+.item {
+  padding: 4px 8px;
+  margin: 2px 0;
+  border-radius: 10px;
+  color: @foreground;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  border-left: 1px solid transparent;
+}
+
+row:hover,
+.item:hover {
+  background-color: alpha(@selected-accent, 0.08);
+}
+
+row:selected,
+row:selected:hover,
+.item:selected,
+.item:selected:hover {
+  background-color: @selected-accent;
+  color: @selected-text;
+  border-left: 1px solid @selected-accent;
+}
+
+row:selected label,
+.item:selected label,
+row:selected image,
+.item:selected image {
+  color: @selected-text;
+}
+
+child {
+  padding: 4px 8px;
+  margin: 2px 0;
+  border-radius: 10px;
+  color: @foreground;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  border-left: 1px solid transparent;
+}
+
+child:hover {
+  background-color: alpha(@selected-accent, 0.08);
+}
+
+child:selected,
+child:hover:selected {
+  background-color: @selected-accent;
+  color: @selected-text;
+  border-left: 1px solid @selected-accent;
+}
+
+child:selected #label,
+child:selected #sub,
+child:selected #icon,
+child:selected #activationlabel,
+child:selected #clear,
+child:selected #prompt,
+child:selected #typeahead {
+  color: @selected-text;
+}
+
+.item:focus,
+row:focus,
+child:focus {
+  outline: none;
+}
