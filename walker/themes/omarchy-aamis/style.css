@@ -9,6 +9,10 @@
 @define-color success #34c759;
 @define-color success-alt #34c759;
 
+* {
+  all: unset;
+}
+
 window,
 #window {
   background: none;
@@ -32,6 +36,16 @@ window,
 
 #box {
   background-color: transparent;
+}
+
+popover {
+  background-color: alpha(@base, 0.95);
+  border: 1px solid alpha(@border, 0.45);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 entry,
