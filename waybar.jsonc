@@ -14,14 +14,11 @@
     "clock"
   ],
   "modules-right": [
-    "tray",
-    "pulseaudio",
-    "network",
-    "battery"
+    "group/system"
   ],
 
   "custom/os_icon": {
-    "format": "󰀵",
+    "format": "󱄅",
     "tooltip": false,
     "on-click": "wofi --show drun"
   },
@@ -36,38 +33,37 @@
       "4": "4",
       "5": "5",
       "urgent": "",
-      "active": "",
-      "default": ""
+      "active": "●",
+      "default": "○"
     }
   },
 
   "clock": {
-    "format": "{:%a %d. %b %H:%M}",
+    "format": "{:%I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
-    "format-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", ""]
-    },
-    "on-click": "pavucontrol"
+  "group/system": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+      "battery",
+      "custom/controlcenter"
+    ]
+  },
+
+  "custom/controlcenter": {
+    "format": "󰒓",
+    "tooltip": false,
+    "on-click": "swaync-client -t -sw"
   },
 
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
     "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "⚠ Disconnected",
+    "format-linked": "",
+    "format-disconnected": "⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
 
@@ -76,9 +72,9 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format": "{icon}",
+    "format-charging": "",
+    "format-plugged": "",
     "format-icons": ["", "", "", "", ""]
   },
 
