@@ -1,11 +1,21 @@
 # ⛱ Aamis Theme for Omarchy
 
-A thoughtfully crafted theme for [Omarchy](https://omarchy.org).
-macOS Light Mode aesthetic with crisp white backgrounds, classic blue accents, and beautiful glass/blur effects.
+A thoughtfully crafted theme for [Omarchy](https://omarchy.org), bringing the quintessential **macOS Light Mode** and **Liquid Glass** aesthetic to your Linux setup.
 
-> _"Aamis — Bringing the refined macOS look to your setup."_
+> _"Aamis — The refined macOS look for Omarchy."_
 
-## Preview
+## 🎨 The "Liquid Glass" Aesthetic
+
+Aamis is designed to replicate the signature macOS feeling. Every detail is meticulously crafted to blend elegance with functionality:
+
+- **Liquid Glass & Transparency:** Utilizing subtle glass-like blur effects and a ~0.90 opacity for terminals to create depth and a modern, airy feel.
+- **Crisp & Clean:** Featuring crisp white backgrounds paired with classic Apple blue accents that highlight focus and clarity.
+- **Soft Geometry:** Menus and UI elements feature ~20px rounded corners, softening the interface and matching the modern macOS design language.
+- **Omarchy Philosophy First:** While we deeply embrace the macOS aesthetic, we have intentionally omitted the traditional macOS "traffic light" window controls (red, yellow, green buttons). This decision ensures the theme remains true to Omarchy's opinionated, clean, and distraction-free workflow.
+
+---
+
+## 📸 Preview
 
 |            Lazygit             |           BTOP           |             Nvim             |
 | :----------------------------: | :----------------------: | :--------------------------: |
@@ -16,19 +26,21 @@ macOS Light Mode aesthetic with crisp white backgrounds, classic blue accents, a
 
 ---
 
-## Color Palette
+## 🎨 Color Palette
 
 ![Aamis Color Palette](./assets/pallete.png)
 
 ---
 
-## Installation
+## 🚀 Installation
+
+Install the base theme easily via Omarchy's theme installer:
 
 ```bash
 omarchy-theme-install https://github.com/vyrx-dev/omarchy-aamis-theme.git
 ```
 
-## Vesktop-Theme
+### Vesktop Theme
 
 For Vesktop users, you can install this theme by copying the theme file to your Vesktop themes directory:
 
@@ -38,7 +50,7 @@ cd ~/.config/omarchy/themes/aamis/
 cp vencord.theme.css ~/.config/vesktop/themes/Aamis.theme.css
 ```
 
-## Vicinae Theme
+### Vicinae Theme
 
 To use Aamis in [Vicinae](https://vicinae.com) without touching existing themes:
 
@@ -51,16 +63,17 @@ cp assets/icons/aamis-icon-transparent-bg.png \
   ~/.local/share/vicinae/themes/icons/aamis-theme-icon.png
 ```
 
-## Typora Theme
+### Typora Theme
 
-In Typora simply set the Theme in the *Themes* option
+In Typora, simply set the Theme in the *Themes* option after copying the CSS file:
 
 ```bash
-  cp aamis.css ~/.config/Typora/aamis.css
+cp aamis.css ~/.config/Typora/aamis.css
 ```
 
+---
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 This theme was created using [Aether](https://github.com/bjarneo/aether) by [@bjarneo](https://github.com/bjarneo).
 
