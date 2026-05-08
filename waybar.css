@@ -1,21 +1,21 @@
 /* Aamis Theme - macOS Light Mode with Liquid Glass */
-@define-color background rgba(245, 245, 245, 0.65);
-@define-color foreground #1c1c1c;
-@define-color accent #007aff;
-@define-color hover_bg rgba(220, 220, 220, 0.8);
+@define-color glass_bg rgba(255, 255, 255, 0.45);
+@define-color glass_border rgba(255, 255, 255, 0.6);
+@define-color primary_text #1E1E1E;
+@define-color secondary_text rgba(0, 0, 0, 0.4);
 
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font", "San Francisco", "Helvetica Neue", sans-serif;
+    font-family: "SF Pro", "Inter", "San Francisco", "Helvetica Neue", sans-serif;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent; /* Background is transparent to show the floating modules */
-    color: @foreground;
+    background: transparent;
+    color: @primary_text;
 }
 
 /* Tooltips */
@@ -25,54 +25,74 @@ tooltip {
     border-radius: 12px;
 }
 tooltip label {
-    color: @foreground;
+    color: @primary_text;
 }
 
-/* Floating Islands Base Styling */
+/* Base Liquid Glass Styling for Modules */
 .modules-left > widget > *,
 .modules-center > widget > *,
 .modules-right > widget > * {
-    background: @background;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 20px;
-    padding: 2px 14px;
-    margin: 4px 6px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    background: @glass_bg;
+    border: 1px solid @glass_border;
+    border-radius: 999px; /* Pill shape by default */
+    padding: 4px 14px; /* Inner padding */
+    margin: 4px 6px; /* Outer margin */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
+    color: @primary_text;
+}
+
+/* Squircle for OS Icon */
+#custom-os_icon {
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 16px;
+    color: @primary_text;
 }
 
 /* Workspaces */
+#workspaces {
+    padding: 2px 8px; /* Slightly tighter internal padding to allow breathing room for icons */
+}
+
 #workspaces button {
     padding: 0 8px;
-    color: #8e8e93;
+    color: @secondary_text;
     background: transparent;
-    border-radius: 10px;
+    border-radius: 999px;
     transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-    background: @hover_bg;
-    color: @foreground;
+    color: @primary_text;
     box-shadow: none;
 }
 
 #workspaces button.active {
-    color: @accent;
+    color: @primary_text;
+    font-weight: 800; /* Bold/dark for active */
 }
 
 #workspaces button.urgent {
     color: #ff3b30;
 }
 
-/* Individual Modules Specifics */
-#custom-os_icon {
-    font-size: 18px;
-    padding-right: 18px;
-    padding-left: 14px;
-    color: @accent;
+/* Clock */
+#clock {
+    font-family: "JetBrainsMono Nerd Font", "SF Pro", "Inter", monospace; /* Slightly monospaced feel */
+    font-weight: 700;
 }
 
-#clock {
-    font-weight: 600;
+/* System Group / Right Pill */
+#group-system {
+    padding: 4px 14px;
+}
+
+#network,
+#battery,
+#custom-controlcenter {
+    color: @primary_text;
+    font-size: 16px;
+    padding: 0 6px;
 }
 
 #battery.charging, #battery.plugged {
@@ -94,25 +114,6 @@ tooltip label {
 
 @keyframes blink {
     to {
-        background-color: #ff3b30;
-        color: #f5f5f5;
+        color: #ff3b30;
     }
-}
-
-#pulseaudio.muted {
-    color: #8e8e93;
-}
-
-#tray {
-    padding-right: 12px;
-    padding-left: 12px;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #ff3b30;
 }
