@@ -40,12 +40,19 @@ else
 fi
 
 # ============================================
-# Waybar Configuration
+# Waybar Configuration  
 # ============================================
-echo "Setting up Waybar layout..."
+echo "Setting up Waybar with macOS Liquid Glass..."
 
 WAYBAR_CONFIG_DIR="$HOME/.config/waybar"
 mkdir -p "$WAYBAR_CONFIG_DIR"
+
+# Copy waybar CSS
+if [[ -f "$THEME_DIR/waybar.css" ]]; then
+  cp "$WAYBAR_CONFIG_DIR/style.css" "$WAYBAR_CONFIG_DIR/style.css.bak.$(date +%s)" 2>/dev/null || true
+  cp "$THEME_DIR/waybar.css" "$WAYBAR_CONFIG_DIR/style.css"
+  echo "✓ Waybar CSS installed"
+fi
 
 # Copy waybar layout
 if [[ -f "$THEME_DIR/waybar.jsonc" ]]; then
@@ -66,5 +73,5 @@ echo "✨ Aamis Theme Setup Complete!"
 echo ""
 echo "Next steps:"
 echo "  1. Run: omarchy theme set aamis"
-echo "  2. Your app search and menus will have the macOS Liquid Glass look"
+echo "  2. Enjoy the macOS Liquid Glass aesthetic!"
 echo ""

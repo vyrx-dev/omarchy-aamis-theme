@@ -1,16 +1,22 @@
-/* Aamis Theme - macOS Light Mode with Liquid Glass */
+/* Aamis Theme - macOS Light Mode with Liquid Glass - Compact */
 @define-color glass_bg rgba(255, 255, 255, 0.45);
 @define-color glass_border rgba(255, 255, 255, 0.6);
 @define-color primary_text #1E1E1E;
 @define-color secondary_text rgba(0, 0, 0, 0.4);
+@define-color accent_blue #007AFF;
+@define-color success_green #34c759;
+@define-color warning_yellow #ffcc00;
+@define-color danger_red #ff3b30;
 
 * {
     border: none;
-    border-radius: 0;
-    font-family: "SF Pro", "Inter", "San Francisco", "Helvetica Neue", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro Display", "Inter", "Helvetica Neue", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
     min-height: 0;
+    color: @primary_text;
 }
 
 window#waybar {
@@ -18,126 +24,201 @@ window#waybar {
     color: @primary_text;
 }
 
-/* Tooltips */
-tooltip {
-    background: rgba(245, 245, 245, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-}
-tooltip label {
-    color: @primary_text;
-}
-
-/* Base Liquid Glass Styling for Modules */
-.modules-left > widget > *,
-.modules-center > widget > *,
-.modules-right > widget > * {
+/* Module Groups - Compact Liquid Glass Pills */
+.modules-left,
+.modules-center,
+.modules-right {
     background: @glass_bg;
     border: 1px solid @glass_border;
-    border-radius: 999px; /* Pill shape by default */
-    padding: 4px 14px; /* Inner padding */
-    margin: 4px 6px; /* Outer margin */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
-    color: @primary_text;
+    border-radius: 16px;
+    padding: 3px 12px;
+    margin: 3px 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Squircle for OS Icon */
-#custom-os_icon {
-    border-radius: 12px;
-    padding: 4px 12px;
-    font-size: 16px;
-    color: @primary_text;
+/* Tooltips - macOS Style */
+tooltip {
+    background: rgba(245, 245, 245, 0.95);
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    border-radius: 8px;
+    padding: 6px 10px;
 }
 
-/* Workspaces */
+tooltip label {
+    color: @primary_text;
+    font-size: 10px;
+}
+
+/* Workspaces - Compact pill buttons */
 #workspaces {
-    padding: 2px 8px; /* Slightly tighter internal padding to allow breathing room for icons */
+    margin: 0 6px;
 }
 
 #workspaces button {
-    padding: 0 8px;
-    color: @secondary_text;
     background: transparent;
-    border-radius: 999px;
-    transition: all 0.2s ease;
-}
-
-#workspaces button:hover {
-    color: @primary_text;
-    box-shadow: none;
+    color: @secondary_text;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin: 0 2px;
+    font-weight: 600;
+    font-size: 11px;
 }
 
 #workspaces button.active {
-    color: @primary_text;
-    font-weight: 800; /* Bold/dark for active */
-}
-
-#workspaces button.urgent {
-    color: #ff3b30;
-}
-
-/* Clock */
-#clock {
-    font-family: "JetBrainsMono Nerd Font", "SF Pro", "Inter", monospace; /* Slightly monospaced feel */
+    background: rgba(0, 122, 255, 0.15);
+    color: @accent_blue;
     font-weight: 700;
 }
 
-/* System Group / Right Pill */
-#group-system {
-    padding: 4px 14px;
+#workspaces button.urgent {
+    color: @danger_red;
+    font-weight: 700;
 }
 
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Clock - Monospaced Compact */
+#clock {
+    font-family: "JetBrainsMono Nerd Font", "SF Mono", monospace;
+    font-weight: 600;
+    padding: 0 8px;
+    margin: 0 2px;
+    font-size: 11px;
+}
+
+/* System Icons - Compact */
+#cpu,
+#memory,
+#disk,
+#temperature,
 #network,
+#bluetooth,
 #battery,
-#custom-controlcenter {
-    color: @primary_text;
-    font-size: 16px;
+#pulseaudio,
+#custom-omarchy,
+#custom-update,
+#custom-voxtype,
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
+#tray {
     padding: 0 6px;
+    margin: 0 1px;
+    font-size: 12px;
 }
 
-#battery.charging, #battery.plugged {
-    color: #34c759;
+/* Network Status */
+#network {
+    color: @accent_blue;
+}
+
+#network.disconnected {
+    color: @danger_red;
+}
+
+#network.linked {
+    color: @accent_blue;
+}
+
+#network.ethernet {
+    color: @success_green;
+}
+
+/* Bluetooth */
+#bluetooth {
+    color: @accent_blue;
+}
+
+#bluetooth.off {
+    color: @secondary_text;
+}
+
+#bluetooth.connected {
+    color: @accent_blue;
+}
+
+#bluetooth.discoverable {
+    color: @warning_yellow;
+}
+
+/* Battery Status */
+#battery {
+    color: @primary_text;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @success_green;
+    font-weight: 700;
 }
 
 #battery.warning:not(.charging) {
-    color: #ffcc00;
+    color: @warning_yellow;
+    font-weight: 700;
 }
 
 #battery.critical:not(.charging) {
-    color: #ff3b30;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    color: @danger_red;
+    font-weight: 700;
 }
 
-#tray,
-#tray button,
-#tray button > img,
-#tray button > svg,
-#tray button > span {
-    min-width: 20px;
-    min-height: 20px;
-    width: 20px;
-    height: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
+/* Pulseaudio */
+#pulseaudio {
+    color: @primary_text;
+}
+
+#pulseaudio.muted {
+    color: @secondary_text;
+}
+
+/* Updates */
+#custom-update {
+    font-size: 9px;
+    color: #ff9500;
+    font-weight: 700;
+}
+
+#custom-update.none {
+    color: @secondary_text;
+}
+
+/* Recording/Idle Indicators */
+#custom-screenrecording-indicator.active,
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active,
+#custom-voxtype.recording {
+    color: @danger_red;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+/* Tray - Compact */
+#tray {
+    padding: 0 6px;
+    margin: 0 2px;
 }
 
 #tray button {
     padding: 0 4px;
+    margin: 0 1px;
+    min-width: 0;
 }
 
-#tray img,
-#tray svg {
-    object-fit: contain;
+/* Spacing */
+#workspaces,
+#clock {
+    margin-left: 6px;
 }
 
-@keyframes blink {
-    to {
-        color: #ff3b30;
-    }
+#tray {
+    margin-right: 6px;
+}
+
+/* Hover states for buttons */
+#workspaces button:hover,
+#tray button:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
 }
