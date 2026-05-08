@@ -2,8 +2,8 @@
 
 [meta]
 name        = "Aamis" # Display name shown in theme picker
-description = "Ported to Vicinae from github.com:vyrx-dev/omarchy-aamis-theme.git; A thoughtfully crafted theme for Omarchy. Near‑black canvas, creamy text, warm amber highlights, and a single red accent for clear, focused contrast." # Description shown in theme picker
-variant     = "dark" # Theme variant: "dark" or "light". Every dark theme inherits from vicinae-dark and every light theme from vicinae-light. 
+description = "Ported to Vicinae from github.com:vyrx-dev/omarchy-aamis-theme.git; A refined macOS Liquid Glass theme for Omarchy." # Description shown in theme picker
+variant     = "light" # Theme variant: "dark" or "light". Every dark theme inherits from vicinae-dark and every light theme from vicinae-light. 
 icon        = "icons/aamis-theme-icon.png"
 
 # ============================================================================
@@ -11,29 +11,29 @@ icon        = "icons/aamis-theme-icon.png"
 # ============================================================================
 # Mapping Aether's base palette:
 # base00 = #f5f5f5 (background)
-# base01 = #5e5959 (status/secondary background)
+# base01 = #3a3a3a (status/secondary background)
 # base02 = #f5f5f5 (selection background)
-# base03 = #5e5959 (comments/invisibles)
-# base04 = #ffffff (dark foreground / muted)
-# base05 = #1c1c1c (primary foreground)
-# base06 = #1c1c1c (light foreground)
-# base07 = #ffffff (light background)
+# base03 = #3a3a3a (comments/invisibles)
+# base04 = #000000 (dark foreground / muted)
+# base05 = #000000 (primary foreground)
+# base06 = #000000 (light foreground)
+# base07 = #f0f0f0 (light background)
 # base08 = #ff3b30 (red)
-# base09 = #ff6961 (orange)
-# base0A = #ffcc00 (amber / primary accent)
+# base09 = #d94a42 (orange)
+# base0A = #d4a800 (amber / primary accent)
 # base0B = #34c759 (strings / green)
-# base0C = #5ac8fa (cyan / support)
+# base0C = #0095c8 (cyan / support)
 # base0D = #007aff (functions / blue)
 # base0E = #f66151 (magenta)
-# base0F = #ffd60a (brown/yellow)
+# base0F = #cc9900 (brown/yellow)
 
 [colors.core]
-accent               = "#ffcc00" # base0A - warm amber highlight
+accent               = "#d4a800" # base0A - warm amber highlight
 accent_foreground    = "#f5f5f5" # dark text on bright accent
 background           = "#f5f5f5" # base00 - main background
-foreground           = "#1c1c1c" # base05 - primary text
-secondary_background = "#1b1b1b" # custom value for raised surfaces, status bars (not base01)
-border               = "#5e5959" # mid-contrast border
+foreground           = "#000000" # base05 - primary text
+secondary_background = "#e8e8e8" # custom value for raised surfaces, status bars
+border               = "#6b6b70" # mid-contrast border
 
 # ============================================================================
 # Window-Specific Colors
@@ -51,14 +51,14 @@ border = "colors.core.border"
 # Your color palette, central to your theme's identity
 
 [colors.accents]
-blue    = "#007aff" # base0D (soft beige/blue role in Aether)
-green   = "#34c759" # base0B (strings / green-ish warm)
+blue    = "#007aff" # base0D
+green   = "#34c759" # base0B
 magenta = "#f66151" # base0E
-orange  = "#ff6961" # base09
+orange  = "#d94a42" # base09
 red     = "#ff3b30" # base08 - primary red accent
-yellow  = "#ffcc00" # base0A - warm amber
-cyan    = "#5ac8fa" # base0C
-purple  = "#ffffff" # base04 - used as soft purple/neutral
+yellow  = "#d4a800" # base0A - warm amber
+cyan    = "#0095c8" # base0C
+purple  = "#af52de" # base04 - used as soft purple/neutral
 
 # ============================================================================
 # Text Colors
@@ -67,10 +67,10 @@ purple  = "#ffffff" # base04 - used as soft purple/neutral
 
 [colors.text]
 default     = "colors.core.foreground"
-muted       = "#ffffff" # base04 - softer creamy text
+muted       = "#6b6b70" # base04 - softer text
 danger      = "colors.accents.red"
 success     = "colors.accents.green"
-placeholder = "#5e5959" # base03 - comment / hint tone
+placeholder = "#6b6b70" # base03 - comment / hint tone
 selection   = { background = "colors.core.accent", foreground = "colors.core.accent_foreground" }
 
 [colors.text.links]

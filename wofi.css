@@ -1,11 +1,11 @@
 @define-color bg rgba(245, 245, 245, 0.75);
-@define-color fg #1c1c1c;
+@define-color fg #000000;
 @define-color gray1 #34c759;
-@define-color gray2 #8e8e93;
+@define-color gray2 #6b6b70;
 @define-color gray3 #007aff;
-@define-color gray4 #ffcc00;
+@define-color gray4 #d4a800;
 @define-color gray5 #af52de;
-@define-color fg_bright #1c1c1c;
+@define-color fg_bright #000000;
 
 window {
     border-radius: 12px;

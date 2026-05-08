@@ -5,24 +5,24 @@
 
 /* Dynamic color palette from Aether */
 @define-color background #f5f5f5;
-@define-color foreground #1c1c1c;
+@define-color foreground #000000;
 
 @define-color black #f5f5f5;
 @define-color red #ff3b30;
 @define-color green #34c759;
-@define-color yellow #ffcc00;
+@define-color yellow #d4a800;
 @define-color blue #007aff;
 @define-color magenta #af52de;
-@define-color cyan #5ac8fa;
-@define-color white #ffffff;
-@define-color bright_black #8e8e93;
-@define-color bright_red #ff6961;
+@define-color cyan #0095c8;
+@define-color white #f0f0f0;
+@define-color bright_black #6b6b70;
+@define-color bright_red #d94a42;
 @define-color bright_green #34c759;
-@define-color bright_yellow #ffd60a;
+@define-color bright_yellow #cc9900;
 @define-color bright_blue #0a84ff;
 @define-color bright_magenta #af52de;
-@define-color bright_cyan #64d2ff;
-@define-color bright_white #1c1c1c;
+@define-color bright_cyan #00a6e0;
+@define-color bright_white #000000;
 
 /* Adwaita Color Overrides */
 @define-color accent_bg_color @blue;
@@ -187,4 +187,3 @@ toast button.circular.flat.image-button:hover {
 * {
     border-radius: 12px;
 }
-

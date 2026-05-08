@@ -1,11 +1,11 @@
 /* Aamis Theme - macOS Light Mode with Liquid Glass - Compact */
 @define-color glass_bg rgba(255, 255, 255, 0.45);
 @define-color glass_border rgba(255, 255, 255, 0.6);
-@define-color primary_text #1E1E1E;
-@define-color secondary_text rgba(0, 0, 0, 0.4);
+@define-color primary_text #000000;
+@define-color secondary_text rgba(0, 0, 0, 0.55);
 @define-color accent_blue #007AFF;
 @define-color success_green #34c759;
-@define-color warning_yellow #ffcc00;
+@define-color warning_yellow #d4a800;
 @define-color danger_red #ff3b30;
 
 * {
@@ -176,7 +176,7 @@ tooltip label {
 /* Updates */
 #custom-update {
     font-size: 9px;
-    color: #ff9500;
+    color: #cc8800;
     font-weight: 700;
 }
 

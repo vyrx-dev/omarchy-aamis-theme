@@ -2,22 +2,22 @@
 theme[main_bg]="#f5f5f5"
 
 # Main text color
-theme[main_fg]="#1c1c1c"
+theme[main_fg]="#000000"
 
 # Title color for boxes
 theme[title]="#af52de"
 
 # Highlight color for keyboard shortcuts
-theme[hi_fg]="#5ac8fa"
+theme[hi_fg]="#0095c8"
 
 # Background color of selected item in processes box
-theme[selected_bg]="#8e8e93"
+theme[selected_bg]="#6b6b70"
 
 # Foreground color of selected item in processes box
-theme[selected_fg]="#1c1c1c"
+theme[selected_fg]="#000000"
 
 # Color of inactive/disabled text
-theme[inactive_fg]="#8e8e93"
+theme[inactive_fg]="#6b6b70"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
 theme[proc_misc]="#af52de"
@@ -27,32 +27,32 @@ theme[cpu_box]="#34c759"
 theme[mem_box]="#34c759"
 theme[net_box]="#34c759"
 theme[proc_box]="#34c759"
-theme[div_line]="#8e8e93"
+theme[div_line]="#6b6b70"
 
 # Gradient for all meters and graphs
-theme[temp_start]="#5ac8fa"
+theme[temp_start]="#0095c8"
 theme[temp_mid]="#007aff"
 theme[temp_end]="#34c759"
 
 
-theme[cpu_start]="#5ac8fa"
+theme[cpu_start]="#0095c8"
 theme[cpu_mid]="#007aff"
 theme[cpu_end]="#34c759"
 
 
 theme[free_start]="#007aff"
-theme[free_mid]="#ffcc00"
-theme[free_end]="#ffcc00"
+theme[free_mid]="#d4a800"
+theme[free_end]="#d4a800"
 
 
-theme[cached_start]="#ffcc00"
-theme[cached_mid]="#ffcc00"
-theme[cached_end]="#ffcc00"
+theme[cached_start]="#d4a800"
+theme[cached_mid]="#d4a800"
+theme[cached_end]="#d4a800"
 
 
-theme[available_start]="#5ac8fa"
-theme[available_mid]="#5ac8fa"
-theme[available_end]="#5ac8fa"
+theme[available_start]="#0095c8"
+theme[available_mid]="#0095c8"
+theme[available_end]="#0095c8"
 
 
 theme[used_start]="#34c759"
@@ -60,11 +60,11 @@ theme[used_mid]="#34c759"
 theme[used_end]="#34c759"
 
 
-theme[download_start]="#ffcc00"
-theme[download_mid]="#5ac8fa"
+theme[download_start]="#d4a800"
+theme[download_mid]="#0095c8"
 theme[download_end]="#007aff"
 
 
-theme[upload_start]="#ffcc00"
-theme[upload_mid]="#5ac8fa"
+theme[upload_start]="#d4a800"
+theme[upload_mid]="#0095c8"
 theme[upload_end]="#007aff"
