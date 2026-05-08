@@ -1,8 +1,8 @@
-# ⛱ Aamis Theme for Omarchy
+# ⛱ Aamis Theme for Omarchy — macOS Look
 
-A thoughtfully crafted theme for [Omarchy](https://omarchy.org), bringing the quintessential **macOS Light Mode** and **Liquid Glass** aesthetic to your Linux setup.
+A thoughtfully crafted theme collection for [Omarchy](https://omarchy.org), bringing the quintessential **macOS Light Mode** and **Liquid Glass** aesthetic to your Linux setup.
 
-> _"Aamis — The refined macOS look for Omarchy."_
+> _"Aamis — The refined macOS look for Omarchy."_ — by [marexxxxxxx](https://github.com/marexxxxxxx)
 
 ## 🎨 The "Liquid Glass" Aesthetic
 
@@ -37,7 +37,7 @@ Aamis is designed to replicate the signature macOS feeling. Every detail is meti
 Install the base theme easily via Omarchy's theme installer:
 
 ```bash
-omarchy-theme-install https://github.com/vyrx-dev/omarchy-aamis-theme.git
+omarchy-theme-install https://github.com/marexxxxxxx/omarchy-mac.git
 ```
 
 ### Vesktop Theme
@@ -99,4 +99,3 @@ cp ~/.config/omarchy/themes/aamis/waybar.jsonc ~/.config/waybar/config.jsonc
 
 # Reload waybar
 killall -SIGUSR2 waybar
-```
