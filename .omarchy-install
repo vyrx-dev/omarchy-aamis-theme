@@ -1,0 +1,70 @@
+#!/bin/bash
+# Aamis macOS Theme - Post-Installation Hook
+# This script runs automatically after: omarchy theme install https://github.com/marexxxxxxx/omarchy-mac.git
+
+set -e
+
+THEME_DIR="${1:-.}"
+THEME_NAME="aamis"
+
+echo "🎨 Configuring Aamis macOS Theme..."
+
+# ============================================
+# Walker Configuration
+# ============================================
+echo "Setting up Walker with Liquid Glass styling..."
+
+# Create walker theme directory
+WALKER_THEME_DIR="$HOME/.config/walker/themes/$THEME_NAME"
+mkdir -p "$WALKER_THEME_DIR"
+
+# Copy walker CSS
+if [[ -f "$THEME_DIR/walker/themes/$THEME_NAME/style.css" ]]; then
+  cp "$THEME_DIR/walker/themes/$THEME_NAME/style.css" "$WALKER_THEME_DIR/style.css"
+  echo "✓ Walker theme CSS installed"
+else
+  echo "⚠ Walker CSS not found at $THEME_DIR/walker/themes/$THEME_NAME/style.css"
+fi
+
+# Update walker config
+WALKER_CONFIG="$HOME/.config/walker/config.toml"
+if [[ -f "$WALKER_CONFIG" ]]; then
+  # Backup original
+  cp "$WALKER_CONFIG" "$WALKER_CONFIG.bak.$(date +%s)" 2>/dev/null || true
+  
+  # Replace theme setting
+  sed -i "s/^theme = .*/theme = \"$THEME_NAME\"/" "$WALKER_CONFIG"
+  echo "✓ Walker config updated"
+else
+  echo "⚠ Walker config not found at $WALKER_CONFIG"
+fi
+
+# ============================================
+# Waybar Configuration
+# ============================================
+echo "Setting up Waybar layout..."
+
+WAYBAR_CONFIG_DIR="$HOME/.config/waybar"
+mkdir -p "$WAYBAR_CONFIG_DIR"
+
+# Copy waybar layout
+if [[ -f "$THEME_DIR/waybar.jsonc" ]]; then
+  cp "$WAYBAR_CONFIG_DIR/config.jsonc" "$WAYBAR_CONFIG_DIR/config.jsonc.bak.$(date +%s)" 2>/dev/null || true
+  cp "$THEME_DIR/waybar.jsonc" "$WAYBAR_CONFIG_DIR/config.jsonc"
+  echo "✓ Waybar layout installed"
+fi
+
+# ============================================
+# Restart Services
+# ============================================
+echo "Restarting services..."
+omarchy restart walker 2>/dev/null || echo "⚠ Walker restart skipped"
+omarchy restart waybar 2>/dev/null || echo "⚠ Waybar restart skipped"
+
+echo ""
+echo "✨ Aamis Theme Setup Complete!"
+echo ""
+echo "Next steps:"
+echo "  1. Run: omarchy theme set aamis"
+echo "  2. Your app search and menus will have the macOS Liquid Glass look"
+echo ""

@@ -1,4 +1,4 @@
-# ⛱ Aamis Theme for Omarchy — macOS Look
+# ⛱ MacOs Theme for Omarchy — macOS Look
 
 A thoughtfully crafted theme collection for [Omarchy](https://omarchy.org), bringing the quintessential **macOS Light Mode** and **Liquid Glass** aesthetic to your Linux setup.
 
@@ -34,10 +34,54 @@ Aamis is designed to replicate the signature macOS feeling. Every detail is meti
 
 ## 🚀 Installation
 
-Install the base theme easily via Omarchy's theme installer:
+### Quick Setup (Recommended)
+
+Install and configure the complete Aamis theme in one go:
 
 ```bash
-omarchy-theme-install https://github.com/marexxxxxxx/omarchy-mac.git
+# 1. Install the theme
+omarchy theme install https://github.com/marexxxxxxx/omarchy-mac.git
+
+# 2. Run the post-install setup (configures Walker, Waybar, etc.)
+bash ~/.config/omarchy/themes/aamis/.omarchy-install ~/.config/omarchy/themes/aamis
+
+# 3. Apply the theme
+omarchy theme set aamis
+```
+
+That's it! Your app launcher (Walker) and menu bar (Waybar) now have the macOS Liquid Glass look. ✨
+
+### Auto-Configuration Hook (Optional)
+
+To automatically configure Walker every time you switch to the Aamis theme:
+
+```bash
+# Copy the theme-set hook to your Omarchy hooks directory
+mkdir -p ~/.config/omarchy/hooks
+cp ~/.config/omarchy/themes/aamis/.config/omarchy/hooks/theme-set ~/.config/omarchy/hooks/theme-set
+chmod +x ~/.config/omarchy/hooks/theme-set
+```
+
+Now whenever you run `omarchy theme set aamis`, Walker will automatically be configured with the Liquid Glass theme!
+
+### Manual Installation
+
+If you prefer to install components individually:
+
+```bash
+# Install the theme
+omarchy theme install https://github.com/marexxxxxxx/omarchy-mac.git
+
+# Apply the theme
+omarchy theme set aamis
+
+# Optionally configure Walker for macOS look:
+mkdir -p ~/.config/walker/themes/aamis
+cp ~/.config/omarchy/themes/aamis/walker/themes/aamis/style.css ~/.config/walker/themes/aamis/
+sed -i 's/theme = "omarchy-default"/theme = "aamis"/' ~/.config/walker/config.toml
+omarchy restart walker
+
+# Waybar is automatically configured
 ```
 
 ### Vesktop Theme
@@ -83,19 +127,42 @@ The Typora theme was contributed by [@pymmog](https://github.com/pymmog).
 
 The VS Code theme was contributed by [@fedesapuppo](https://github.com/fedesapuppo).
 
+## Walker Theme (App Launcher)
+
+The Aamis theme provides a beautiful macOS-style app launcher with Liquid Glass transparency and smooth rounded corners.
+
+✨ **Now Automatic!** When you run the post-install setup (see Installation section), Walker is automatically configured with the Aamis theme.
+
+If you manually installed the theme and want to set it up now:
+
+```bash
+# Create walker theme directory
+mkdir -p ~/.config/walker/themes/aamis
+
+# Copy the theme CSS
+cp ~/.config/omarchy/themes/aamis/walker/themes/aamis/style.css ~/.config/walker/themes/aamis/
+
+# Update walker config to use the theme
+sed -i 's/theme = "omarchy-default"/theme = "aamis"/' ~/.config/walker/config.toml
+
+# Restart walker
+omarchy restart walker
+```
+
 ## Waybar Theme
 
 This theme provides a completely customized macOS-style Waybar setup featuring floating "liquid glass" modules.
-Since the `omarchy-theme-install` command only automatically applies the styling (`waybar.css`), you need to manually copy the module layout configuration (`waybar.jsonc`) to get the full macOS experience.
 
-To set up the layout:
+✨ **Now Automatic!** When you run the post-install setup (see Installation section), the Waybar layout is automatically configured for you.
+
+If you manually installed the theme and want to set it up now:
 
 ```bash
 # Backup existing config (optional)
-mv ~/.config/waybar/config.jsonc ~/.config/waybar/config.jsonc.bak 2>/dev/null
+cp ~/.config/waybar/config.jsonc ~/.config/waybar/config.jsonc.bak
 
 # Copy the macOS layout from the theme directory
 cp ~/.config/omarchy/themes/aamis/waybar.jsonc ~/.config/waybar/config.jsonc
 
 # Reload waybar
-killall -SIGUSR2 waybar
+omarchy restart waybar

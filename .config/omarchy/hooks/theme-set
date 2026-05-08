@@ -1,0 +1,28 @@
+#!/bin/bash
+# Aamis Theme Hook - Automatically configure Walker when theme is set
+# This hook runs automatically when: omarchy theme set aamis
+
+THEME_NAME="$1"
+
+if [[ "$THEME_NAME" == "aamis" || "$THEME_NAME" == "Aamis" ]]; then
+  echo "🎨 Configuring Walker for Aamis theme..."
+  
+  # Create walker theme directory
+  mkdir -p ~/.config/walker/themes/aamis
+  
+  # Copy walker CSS from the installed theme
+  THEME_PATH="$HOME/.config/omarchy/themes/aamis"
+  if [[ -f "$THEME_PATH/walker/themes/aamis/style.css" ]]; then
+    cp "$THEME_PATH/walker/themes/aamis/style.css" ~/.config/walker/themes/aamis/
+    
+    # Update walker config
+    if [[ -f "$HOME/.config/walker/config.toml" ]]; then
+      sed -i 's/^theme = .*/theme = "aamis"/' ~/.config/walker/config.toml
+    fi
+    
+    # Restart walker
+    omarchy restart walker 2>/dev/null || true
+    
+    echo "✓ Walker configured with Aamis theme"
+  fi
+fi
