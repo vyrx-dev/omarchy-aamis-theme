@@ -77,6 +77,26 @@ cp aamis.css ~/.config/Typora/aamis.css
 
 This theme was created using [Aether](https://github.com/bjarneo/aether) by [@bjarneo](https://github.com/bjarneo).
 
-- The **Vicinae** theme and logo were provided by [@lukapmoran](https://github.com/lukapmoran).
-- The **Typora** theme was contributed by [@pymmog](https://github.com/pymmog).
-- The **VS Code** theme was contributed by [@fedesapuppo](https://github.com/fedesapuppo).
+The Vicinae theme and logo were provided by [@lukapmoran](https://github.com/lukapmoran).
+
+The Typora theme was contributed by [@pymmog](https://github.com/pymmog).
+
+The VS Code theme was contributed by [@fedesapuppo](https://github.com/fedesapuppo).
+
+## Waybar Theme
+
+This theme provides a completely customized macOS-style Waybar setup featuring floating "liquid glass" modules.
+Since the `omarchy-theme-install` command only automatically applies the styling (`waybar.css`), you need to manually copy the module layout configuration (`waybar.jsonc`) to get the full macOS experience.
+
+To set up the layout:
+
+```bash
+# Backup existing config (optional)
+mv ~/.config/waybar/config.jsonc ~/.config/waybar/config.jsonc.bak 2>/dev/null
+
+# Copy the macOS layout from the theme directory
+cp ~/.config/omarchy/themes/aamis/waybar.jsonc ~/.config/waybar/config.jsonc
+
+# Reload waybar
+killall -SIGUSR2 waybar
+```
