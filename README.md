@@ -92,6 +92,10 @@ mkdir -p ~/.config/omarchy/hooks
 cp .config/omarchy/hooks/theme-set ~/.config/omarchy/hooks/theme-set
 chmod +x ~/.config/omarchy/hooks/theme-set
 
+# Copy walker config from repo
+mkdir -p ~/.config/walker
+cp walker/config.toml ~/.config/walker/config.toml
+
 # Run the theme installer for walker/waybar setup
 bash ~/.config/omarchy/themes/aamis/.omarchy-install ~/.config/omarchy/themes/aamis
 

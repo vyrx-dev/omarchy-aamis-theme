@@ -16,6 +16,14 @@ else
   rm -rf "$INSTALL_DIR/.git"
 fi
 
+# Copy Walker config from repo if present
+if [[ -f "$INSTALL_DIR/walker/config.toml" ]]; then
+  mkdir -p "$HOME/.config/walker"
+  cp "$HOME/.config/walker/config.toml" "$HOME/.config/walker/config.toml.bak.$(date +%s)" 2>/dev/null || true
+  cp "$INSTALL_DIR/walker/config.toml" "$HOME/.config/walker/config.toml"
+  echo "✓ Walker config installed"
+fi
+
 # Ensure install script is executable
 chmod +x "$INSTALL_DIR/.omarchy-install" 2>/dev/null || true
 

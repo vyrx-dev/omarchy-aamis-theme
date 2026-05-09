@@ -29,14 +29,19 @@ fi
 # Update walker config
 WALKER_CONFIG="$HOME/.config/walker/config.toml"
 if [[ -f "$WALKER_CONFIG" ]]; then
-  # Backup original
   cp "$WALKER_CONFIG" "$WALKER_CONFIG.bak.$(date +%s)" 2>/dev/null || true
-  
-  # Replace theme setting
   sed -i "s/^theme = .*/theme = \"$THEME_NAME\"/" "$WALKER_CONFIG"
   echo "✓ Walker config updated"
 else
   echo "⚠ Walker config not found at $WALKER_CONFIG"
+fi
+
+# Copy walker config from repo if provided
+if [[ -f "$THEME_DIR/walker/config.toml" ]]; then
+  mkdir -p "$HOME/.config/walker"
+  cp "$HOME/.config/walker/config.toml" "$HOME/.config/walker/config.toml.bak.$(date +%s)" 2>/dev/null || true
+  cp "$THEME_DIR/walker/config.toml" "$HOME/.config/walker/config.toml"
+  echo "✓ Walker config installed from theme"
 fi
 
 # ============================================
