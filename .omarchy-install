@@ -6,6 +6,7 @@ set -e
 
 THEME_DIR="${1:-.}"
 THEME_NAME="aamis"
+WALKER_THEME_NAME="omarchy-aamis"
 
 echo "🎨 Configuring Aamis macOS Theme..."
 
@@ -15,32 +16,24 @@ echo "🎨 Configuring Aamis macOS Theme..."
 echo "Setting up Walker with Liquid Glass styling..."
 
 # Create walker theme directory
-WALKER_THEME_DIR="$HOME/.config/walker/themes/$THEME_NAME"
+WALKER_THEME_DIR="$HOME/.config/walker/themes/$WALKER_THEME_NAME"
 mkdir -p "$WALKER_THEME_DIR"
 
 # Copy walker CSS
-if [[ -f "$THEME_DIR/walker/themes/$THEME_NAME/style.css" ]]; then
-  cp "$THEME_DIR/walker/themes/$THEME_NAME/style.css" "$WALKER_THEME_DIR/style.css"
+if [[ -f "$THEME_DIR/walker/themes/$WALKER_THEME_NAME/style.css" ]]; then
+  cp "$THEME_DIR/walker/themes/$WALKER_THEME_NAME/style.css" "$WALKER_THEME_DIR/style.css"
   echo "✓ Walker theme CSS installed"
 else
-  echo "⚠ Walker CSS not found at $THEME_DIR/walker/themes/$THEME_NAME/style.css"
+  echo "⚠ Walker CSS not found at $THEME_DIR/walker/themes/$WALKER_THEME_NAME/style.css"
 fi
 
-# Update walker config
 WALKER_CONFIG="$HOME/.config/walker/config.toml"
-if [[ -f "$WALKER_CONFIG" ]]; then
-  cp "$WALKER_CONFIG" "$WALKER_CONFIG.bak.$(date +%s)" 2>/dev/null || true
-  sed -i "s/^theme = .*/theme = \"$THEME_NAME\"/" "$WALKER_CONFIG"
-  echo "✓ Walker config updated"
-else
-  echo "⚠ Walker config not found at $WALKER_CONFIG"
-fi
-
-# Copy walker config from repo if provided
 if [[ -f "$THEME_DIR/walker/config.toml" ]]; then
   mkdir -p "$HOME/.config/walker"
-  cp "$HOME/.config/walker/config.toml" "$HOME/.config/walker/config.toml.bak.$(date +%s)" 2>/dev/null || true
-  cp "$THEME_DIR/walker/config.toml" "$HOME/.config/walker/config.toml"
+  if [[ -f "$WALKER_CONFIG" ]]; then
+    cp "$WALKER_CONFIG" "$WALKER_CONFIG.bak.$(date +%s)" 2>/dev/null || true
+  fi
+  cp "$THEME_DIR/walker/config.toml" "$WALKER_CONFIG"
   echo "✓ Walker config installed from theme"
 fi
 

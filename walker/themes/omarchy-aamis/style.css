@@ -1,9 +1,9 @@
 @define-color selected-text #ffffff;
-@define-color text #000000;
-@define-color base #ffffff;
-@define-color border #6b6b70;
-@define-color foreground #000000;
-@define-color background #f5f5f5;
+@define-color text #1a1a1a;
+@define-color base #f8f8f8;
+@define-color border #c2c2c8;
+@define-color foreground #1a1a1a;
+@define-color background #f4f4f7;
 @define-color selected-accent #007aff;
 @define-color caret #007aff;
 @define-color success #34c759;
@@ -22,16 +22,15 @@ window,
 
 .box-wrapper,
 #BoxWrapper {
-  background-color: rgba(245, 245, 245, 0.90);
+  background-color: rgba(255, 255, 255, 0.78);
   color: @foreground;
-  border: 1px solid alpha(@border, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 20px;
-  padding: 8px;
+  padding: 10px;
   box-shadow:
-    0 18px 38px rgba(0, 0, 0, 0.35),
-    0 15px 12px rgba(0, 0, 0, 0.25);
-  /* Liquid Glass effect */
-  /* Note: Walker/GTK might not support backdrop-filter natively in all environments, but we set opacity to 0.90 for transparency */
+    0 20px 48px rgba(0, 0, 0, 0.14),
+    0 10px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 #box {
@@ -39,44 +38,44 @@ window,
 }
 
 popover {
-  background-color: alpha(@base, 0.95);
-  border: 1px solid alpha(@border, 0.45);
-  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
   padding: 8px;
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.2),
-    0 4px 8px rgba(0, 0, 0, 0.1);
+    0 10px 28px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 entry,
 #input,
 #password,
 #typeahead {
-  background-color: alpha(@base, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   color: @text;
   caret-color: @caret;
-  border: 1px solid alpha(@border, 0.55);
-  border-radius: 12px;
-  padding: 8px 12px;
-  box-shadow: none;
+  border: 1px solid rgba(110, 110, 120, 0.2);
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 entry selection {
-  background-color: alpha(@selected-accent, 0.45);
+  background-color: rgba(0, 122, 255, 0.18);
   color: @text;
 }
 
 #search {
-  background-color: alpha(@base, 0.85);
-  border-radius: 12px;
-  padding: 6px;
-  border: 1px solid alpha(@border, 0.35);
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 14px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 #prompt,
 #clear,
 #typeahead {
-  color: alpha(@foreground, 0.7);
+  color: rgba(0, 0, 0, 0.65);
 }
 
 #prompt {
@@ -99,17 +98,17 @@ scrolledwindow {
 
 row,
 .item {
-  padding: 4px 8px;
+  padding: 6px 10px;
   margin: 2px 0;
-  border-radius: 10px;
+  border-radius: 14px;
   color: @foreground;
-  transition: background-color 120ms ease, border-color 120ms ease;
+  transition: background-color 140ms ease, border-color 140ms ease;
   border-left: 1px solid transparent;
 }
 
 row:hover,
 .item:hover {
-  background-color: alpha(@selected-accent, 0.08);
+  background-color: rgba(0, 122, 255, 0.08);
 }
 
 row:selected,
@@ -129,16 +128,16 @@ row:selected image,
 }
 
 child {
-  padding: 4px 8px;
+  padding: 6px 10px;
   margin: 2px 0;
-  border-radius: 10px;
+  border-radius: 14px;
   color: @foreground;
-  transition: background-color 120ms ease, border-color 120ms ease;
+  transition: background-color 140ms ease, border-color 140ms ease;
   border-left: 1px solid transparent;
 }
 
 child:hover {
-  background-color: alpha(@selected-accent, 0.08);
+  background-color: rgba(0, 122, 255, 0.08);
 }
 
 child:selected,

@@ -3,6 +3,7 @@ set -e
 
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
 THEME_NAME="aamis"
+WALKER_THEME_NAME="omarchy-aamis"
 INSTALL_DIR="$HOME/.config/omarchy/themes/$THEME_NAME"
 
 echo "📦 Installing Aamis theme from repo..."

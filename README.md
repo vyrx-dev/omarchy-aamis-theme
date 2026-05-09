@@ -107,7 +107,7 @@ omarchy theme set aamis
 
 This repo includes the Walker theme assets and hook script in these locations:
 
-- `walker/themes/aamis/style.css`
+- `walker/themes/omarchy-aamis/style.css`
 - `.config/omarchy/hooks/theme-set`
 - `.omarchy-install`
 - `install.sh`
@@ -126,9 +126,9 @@ omarchy theme install https://github.com/marexxxxxxx/omarchy-mac.git
 omarchy theme set aamis
 
 # Optionally configure Walker for macOS look:
-mkdir -p ~/.config/walker/themes/aamis
-cp ~/.config/omarchy/themes/aamis/walker/themes/aamis/style.css ~/.config/walker/themes/aamis/
-sed -i 's/theme = "omarchy-default"/theme = "aamis"/' ~/.config/walker/config.toml
+mkdir -p ~/.config/walker/themes/omarchy-aamis
+cp ~/.config/omarchy/themes/aamis/walker/themes/omarchy-aamis/style.css ~/.config/walker/themes/omarchy-aamis/
+sed -i 's/^theme = .*/theme = "omarchy-aamis"/' ~/.config/walker/config.toml
 omarchy restart walker
 
 # Waybar is automatically configured
@@ -187,13 +187,13 @@ If you manually installed the theme and want to set it up now:
 
 ```bash
 # Create walker theme directory
-mkdir -p ~/.config/walker/themes/aamis
+mkdir -p ~/.config/walker/themes/omarchy-aamis
 
 # Copy the theme CSS
-cp ~/.config/omarchy/themes/aamis/walker/themes/aamis/style.css ~/.config/walker/themes/aamis/
+cp ~/.config/omarchy/themes/aamis/walker/themes/omarchy-aamis/style.css ~/.config/walker/themes/omarchy-aamis/
 
 # Update walker config to use the theme
-sed -i 's/theme = "omarchy-default"/theme = "aamis"/' ~/.config/walker/config.toml
+sed -i 's/^theme = .*/theme = "omarchy-aamis"/' ~/.config/walker/config.toml
 
 # Restart walker
 omarchy restart walker

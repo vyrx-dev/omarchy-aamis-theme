@@ -8,16 +8,16 @@ if [[ "$THEME_NAME" == "aamis" || "$THEME_NAME" == "Aamis" ]]; then
   echo "🎨 Configuring Walker for Aamis theme..."
   
   # Create walker theme directory
-  mkdir -p ~/.config/walker/themes/aamis
+  mkdir -p ~/.config/walker/themes/omarchy-aamis
   
   # Copy walker CSS from the installed theme
   THEME_PATH="$HOME/.config/omarchy/themes/aamis"
-  if [[ -f "$THEME_PATH/walker/themes/aamis/style.css" ]]; then
-    cp "$THEME_PATH/walker/themes/aamis/style.css" ~/.config/walker/themes/aamis/
+  if [[ -f "$THEME_PATH/walker/themes/omarchy-aamis/style.css" ]]; then
+    cp "$THEME_PATH/walker/themes/omarchy-aamis/style.css" ~/.config/walker/themes/omarchy-aamis/
     
     # Update walker config
     if [[ -f "$HOME/.config/walker/config.toml" ]]; then
-      sed -i 's/^theme = .*/theme = "aamis"/' ~/.config/walker/config.toml
+      sed -i 's/^theme = .*/theme = "omarchy-aamis"/' ~/.config/walker/config.toml
     fi
     
     # Restart walker
